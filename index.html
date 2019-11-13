@@ -14,24 +14,64 @@
             }
         pre {
             color: blue;
-            margin-right:50%;
+            margin-right:60%;
         }
           p {
-            margin-right: 50%;
+            margin-right: 55%;
         }
+    #list{
+        margin-right: 10%;
+    }
+    ol{
+        margin-right: 55%
+    }
 </style>
         
 </head>
-ch 9(partial),10 (p.149-177,195-215)
+    
+<h1>Animations</h1>
 <p>
-First, the data from the original graph must be updated. In order to do this we need to:          
+    <h3>Data</h3>
+First, the data from the existing graph must be updated. In order to do this we need to:          
  <ol>
              <li> Modify the values in our dataset </li>
-             <li> Rebind the new values to the existing elements and overwrite the original datavalues </li>
-             <li> Set new attribute values to update the visual display </li>
+             <li> Rebind the new values to the existing elements and overwrite the original data values. <p id=list>This is done by selecting our rects and calling .data() again</p> </li>
+            <li> Set new attribute values to update the visual display <p id=list> This is done by copying and pasting the scale code we've already written for the original graph. Additionally, the data labels and rect colors must be updates as well.</p></li>
 </ol>
-            
+
+    
+</p>
+     <p> All of this is done in a new funciton that contains an on("click") parameter
+    
+    </p>
+    
+        <h3>Axis</h3>
+ Once we have our data we need to update the axes. For both the x and y (for a scatterplot at least), we need to:
+<ol>
+    
+    <li> Select the axis</li>
+    <li> Initiate a transiton</li>
+    <li> Set the transition's duration</li>
+    <li> Call the approptiate axis generator</li>
+    
+</ol>
+    
+    
+    
 </p> 
-            
-</body>
+
+    <h3>Transitions</h3>
+ <p> Smooth transitions can also be added by .transition() and the duration (how long the transition will take) of the transition can be specified. However it is important to note in our code that the duration must come after the transition. 
+      
+</p>
+<p> 
+ Once we have a transition, we can make something happen at the beginning or end of a transition using .on() in conjunction with a new function to execute some type of action.
+    
+</p>
+
+<p>
+
+    
+    
+ </body>
 </html>
